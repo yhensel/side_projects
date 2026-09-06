@@ -137,7 +137,7 @@ setup: build up install migrate fixtures
 # ⚙️ Backend (Symfony)
 # ============================================================================
 console:
-	$(BACKEND) php bin/console
+	$(BACKEND) php bin/console $(COMMAND)
 
 cache-clear:
 	$(BACKEND) php bin/console cache:clear

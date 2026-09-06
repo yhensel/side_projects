@@ -11,7 +11,7 @@ The application is organized as a React progressive web app backed by a Symfony 
 - Automatic body-fat percentage calculation using anthropometric measurements and the U.S. Navy method.
 - Goal and progress tracking.
 - Optional groups, invitations, memberships, and activity feeds.
-- REST API documented and exposed through API Platform.
+- REST API exposed through Symfony controllers.
 - Responsive React frontend with PWA support.
 
 The standalone measurement and progress workflow is the primary product experience. Group participation is optional and must not be required to use the core features.
@@ -36,7 +36,6 @@ The backend is the source of truth for business rules and data validation. It us
 
 - PHP 8.2 or newer.
 - Symfony 7.4.
-- API Platform 4.3 for REST resources and API documentation.
 - Doctrine ORM and migrations.
 - JWT authentication with LexikJWTAuthenticationBundle.
 - Refresh tokens with GesdinetJWTRefreshTokenBundle.
@@ -130,7 +129,7 @@ make console           # Run a Symfony console command
 For example:
 
 ```bash
-make console -- about
+make console COMMAND="about"
 ```
 
 ### Frontend development
@@ -164,7 +163,7 @@ The main workflows include:
 - Measurement create, list, and detail operations for authenticated users.
 - Group creation, joining by invitation code, membership listing, and activity feeds.
 
-API Platform provides the resource schema and interactive documentation when enabled by the current Symfony configuration. Controllers and application services enforce authorization and validation on the backend; frontend validation is only a usability aid.
+Symfony controllers and application services expose the API and enforce authorization and validation on the backend; frontend validation is only a usability aid.
 
 ## Body-Fat Calculation
 
