@@ -1,0 +1,9 @@
+gesdinet_jwt_refresh_token:
+    refresh_token_class: Gesdinet\JWTRefreshTokenBundle\Entity\RefreshToken
+    dbal_connection: doctrine.dbal.default_connection
+    dbal_auto_create_table: true
+    ttl: 2592000
+    single_use: true
+    token_parameter_name: refresh_token
+    return_expiration: true
+    dbal_table_name: glorious_magra_refresh_tokens

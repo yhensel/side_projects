@@ -1,0 +1,4 @@
+CREATE DATABASE IF NOT EXISTS projects CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+CREATE USER IF NOT EXISTS 'projects'@'%' IDENTIFIED BY 'projects';
+GRANT ALL PRIVILEGES ON projects.* TO 'projects'@'%';
+FLUSH PRIVILEGES;
